@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, .app-container, .app-container * {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Light mode (domyślny) */
+:root {
+  --main-bg: #f4f6f8;
+  --main-fg: #2c3e50;
+  --input-bg: #fff;
+  --input-border: #ddd;
+  --button-bg: #1565c0;
+  --button-hover: #1976d2;
+  --button-fg: #fff;
+  --note-bg: #fff;
+  --note-shadow: #eee;
+}
+
+/* Dark mode */
+body.dark {
+  --main-bg: #181c23;
+  --main-fg: #e0e6ed;
+  --input-bg: #232935;
+  --input-border: #333;
+  --button-bg: #3949ab;
+  --button-hover: #5c6bc0;
+  --button-fg: #fff;
+  --note-bg: #212735;
+  --note-shadow: #222;
+}
+
+.app-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: var(--main-bg);
+  color: var(--main-fg);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #ccc;
+}
+
+.app-container h1 {
+  margin-bottom: 24px;
+  font-size: 2em;
+  color: var(--main-fg);
+}
+
+.app-container input,
+.app-container textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--main-fg);
+}
+
+.app-container button {
+  padding: 10px 32px;
+  font-size: 1em;
+  background: var(--button-bg);
+  color: var(--button-fg);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background 0.2s;
+}
+
+.app-container button:hover {
+  background: var(--button-hover);
+}
+
+.app-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.app-container li {
+  background: var(--note-bg);
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px var(--note-shadow);
+  padding: 12px;
+  color: var(--main-fg);
+}
